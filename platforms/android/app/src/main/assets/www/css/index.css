@@ -1,114 +1,92 @@
-/* Include the padding and border in an element's total width and height */
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Remove margins and padding from the list */
-  ul {
+*{
     margin: 0;
     padding: 0;
-  }
-  
-  /* Style the list items */
-  ul li {
+    box-sizing: border-box;
+}
+
+body{
+    
+   background-color: antiquewhite;
+    min-height: 100vh;
+}
+
+header{
+
+   
+    font-size: 1rem;
+    font-family: cursive;
+}
+header,form{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,form button{
+    padding: 0.5rem;
+    margin-top: 50pt;
+   
+}
+
+form button{
+    color:white;
+    background:blue;
     cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #eee;
-    font-size: 18px;
-    transition: 0.2s;
-  
-    /* make the list items unselectable */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* Set all odd list items to a different color (zebra-stripes) */
-  ul li:nth-child(odd) {
-    background: #f9f9f9;
-  }
-  
-  /* Darker background-color on hover */
-  ul li:hover {
-    background: #ddd;
-  }
-  
-  /* When clicked on, add a background color and strike out text */
-  ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
-  }
-  
-  /* Add a "checked" mark when clicked on */
-  ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-  }
-  
-  /* Style the close button */
-  .close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 12px 16px 12px 16px;
-  }
-  
-  .close:hover {
-    background-color: #f44336;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: #d88771;
     color: white;
-  }
-  
-  /* Style the header */
-  .header {
-    background-color: #f44336;
-    padding: 30px 40px;
+}
+
+.todoList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 80%;
+    list-style: none;
+}
+.todo{
+    font-size: 1rem;
+    
+    margin: 0.5rem;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.todo li{
+    flex:1;
+}
+
+.trash-btn,
+.complete-btn{
+
+    background : #ff6f47;
     color: white;
-    text-align: center;
-  }
-  
-  /* Clear floats after the header */
-  .header:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Style the input */
-  input {
-    margin: 0;
     border: none;
-    border-radius: 0;
-    width: 75%;
-    padding: 10px;
-    float: left;
-    font-size: 16px;
-  }
-  
-  /* Style the "Add" button */
-  .addBtn {
-    padding: 10px;
-    width: 25%;
-    background: #d9d9d9;
-    color: #555;
-    float: left;
-    text-align: center;
-    font-size: 16px;
+    padding: 1rem;
     cursor: pointer;
-    transition: 0.3s;
-    border-radius: 0;
-  }
-  
-  .addBtn:hover {
-    background-color: #bbb;
-  }
+    font-size: 1rem;
+
+}
+
+.complete-btn{
+    background-color: green;
+}
+
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
