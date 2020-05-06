@@ -12,12 +12,14 @@ var todos = [];
 
 
 function addCordovaEvents(){
+    //console.log(navigator.camera);
+    console.log("navigator.geolocation works well");
     
     document.addEventListener("deviceready",onDeviceReady,false);
   }
   function onDeviceReady(){
 
-    console.log("I am ready!!");
+    console.log(navigator.camera);
     document.addEventListener("pause",function(){
       saveList(todos);
     },false);
