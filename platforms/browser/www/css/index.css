@@ -5,17 +5,19 @@
 }
 
 body{
-    background-image: linear-gradient(120deg,#f6d365, #fda085);
-    color: white;
-    font-family: "Poppins" , sans-serif;
+    
+   background-color: antiquewhite;
     min-height: 100vh;
 }
 
 header{
-    font-size: 1.5rem;
+
+   
+    font-size: 1rem;
+    font-family: cursive;
 }
 header,form{
-    min-height: 20vh;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,14 +25,13 @@ header,form{
 
 form input,form button{
     padding: 0.5rem;
-    font-size: 2rem;
-    border: none;
-    background: white;
+    margin-top: 50pt;
+   
 }
 
 form button{
-    color: #f6d365;
-    background: white;
+    color:white;
+    background:blue;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -40,7 +41,7 @@ form button:hover{
     color: white;
 }
 
-.todo-container{
+.todoList{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,10 +51,10 @@ form button:hover{
     list-style: none;
 }
 .todo{
+    font-size: 1rem;
+    
     margin: 0.5rem;
     background: white;
-    color: black;
-    font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,4 +79,9 @@ form button:hover{
 
 .complete-btn{
     background-color: green;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
 }

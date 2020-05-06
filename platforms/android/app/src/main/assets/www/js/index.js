@@ -16,6 +16,8 @@ function addCordovaEvents(){
     document.addEventListener("deviceready",onDeviceReady,false);
   }
   function onDeviceReady(){
+
+    console.log("I am ready!!");
     document.addEventListener("pause",function(){
       saveList(todos);
     },false);
@@ -128,13 +130,13 @@ function getTodos(){
     //Check mark Button
 
     const completedButton = document.createElement('button');
-    completedButton.innerHTML = '<i class="fas fa-check"></i>';
+    completedButton.innerText = 'Checked';
     completedButton.classList.add("complete-btn");
     todoDiv.appendChild(completedButton);
 
     //trash button
     const trashButton = document.createElement('button');
-    trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+    trashButton.innerHTML = 'Remove';
     trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
 
